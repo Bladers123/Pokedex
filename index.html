@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <script src="templates.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./img/pokeball.png">
+    <title>Pokedex</title>
+</head>
+
+<body onload="init()">
+    <div id="myProgress">
+        <div id="myBar"></div>
+        <div id="progressText">0%</div>
+    </div>
+    <form class="header">
+        <a href="./index.html"><img src="./img/title.png" alt="Logo"></a>
+        <input id="find-pokemon-id" type="text" required pattern="[A-Za-z]" maxlength="20"
+            placeholder="Pokemon suchen...">
+    </form>
+    <div class="main">
+        <div class="pokedex" id="pokedex-id"></div>
+        <div class="info-background d-none" id="info-id"></div>
+        <button id="load-next-pokemons-id" class="load-next-pokemons-button" onclick="loadPokemons()" disabled>Load more
+            Pokemons</button>
+    </div>
+</body>
+
+</html>
